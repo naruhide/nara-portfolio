@@ -5,27 +5,27 @@
         <img src="../assets/marrige.jpeg" alt="profile-image">
       </div>
       <div class="profile-detail">
-        <div class="name ribbon">
+        <div class="ribbon">
           Naruhide Ueda
         </div>
-        <div class="birth ribbon">
+        <div class="ribbon">
           H6/05/18 age:25
         </div>
-        <div class="child ribbon">
+        <div class="ribbon">
           一児のパパ
         </div>
-        <div class="like ribbon">
+        <div class="ribbon">
           <p>テニスが一番得意</p>
           <p>小、中は野球少年</p>
           <p>ゴルフは下手</p>
         </div>
-        <div class="nara ribbon">
+        <div class="ribbon">
           <p>奈良県大和郡山市</p>
           <div class="gmap"><GmapMap
             :center="{lat:34.621518, lng:135.778167}"
             :zoom="12"
             map-type-id="terrain"
-            style="width: 100%; height: 200px"
+            style="width: 100%; height: 300px"
           >
             <GmapMarker
               <!--:key="index"-->
@@ -46,8 +46,7 @@
         <a href="https://github.com/naruhide/my-google-teacher.git" target="_blank">GitHub</a>
         <p>Ruby on Rails で初めてWebアプリケーションを作りました。</p>
         <p>Google検索ワードのおすすめ共有サービスです。</p>
-        <p>DBにMySQL,
-        テストにはRSpecを使用しています。</p>
+        <p>DBにMySQL,テストにはRSpecを使用しています。</p>
       </div>
       <div class="c">
         <img src="../assets/micon.jpeg" alt="自作OS制作中">
@@ -66,7 +65,6 @@
     }
   }
 </script>
-
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -104,7 +102,7 @@
     font-size: 30px;
     color: #FFF;
     background: #a6d3c8;
-    margin: 20px;
+    margin: 30px 20px;
     font-weight: bold;
   }
 
@@ -282,5 +280,4 @@
     width: 100%;
   }
 }
-
 </style>

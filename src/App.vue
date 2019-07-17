@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <header class="top flexcontainer">
-      <div class="home flexitem item1" 
+    <header class="flexcontainer">
+      <div class="flexitem item1" 
         @mouseover="onMouseover"
         @mouseleave="onMouseleave">
         <router-link to="/" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '2019/07現在' }"
           title="プロフィール">{{ homeMessage }}</router-link>
       </div>   
-      <div class="skill flexitem item2">
+      <div class="flexitem item2">
         <router-link to="/skill" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: 'このサイトはVueで' }"
           title="勉強中">Skill</router-link>
       </div>  
-      <div class="books flexitem item3">
+      <div class="flexitem item3">
         <router-link to="/books" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '大体の興味を示しています' }"
           title="こんな本読んでます">Books</router-link>
       </div>  
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="btn-circle-fishy-min" v-on:click="doSmoothScroll()">
+          <a href="#" class="btn-circle-fishy-min" @click="doSmoothScroll()">
             <font-awesome-icon :icon="['fas', 'arrow-alt-circle-up']" />
           </a>
         </li>
@@ -90,7 +90,7 @@
     padding: 0;
   }
 
-
+/*header関連*/
   .view-enter-active,
   .view-leave-active {
     transition: opacity 0.5s;
@@ -139,6 +139,7 @@
     transform: rotate(10deg);
   }
 
+/*footer関連*/
   footer {
     background-color: #9999FF;
     margin: 0 auto;
