@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     <header class="top flexcontainer">
-      <div class="home flexitem item1">
-        <router-link to="/" class="btn-circle-fishy">Home</router-link>
+      <div class="home flexitem item1" 
+        @mouseover="onMouseover"
+        @mouseleave="onMouseleave">
+        <router-link to="/" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '2019/07現在' }"
+          title="プロフィール">{{ homeMessage }}</router-link>
       </div>   
       <div class="skill flexitem item2">
-        <router-link to="/skill" class="btn-circle-fishy">Skill</router-link>
+        <router-link to="/skill" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: 'このサイトはVueで' }"
+          title="勉強中">Skill</router-link>
       </div>  
       <div class="books flexitem item3">
-        <router-link to="/books" class="btn-circle-fishy">Books</router-link>
+        <router-link to="/books" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '大体の興味を示しています' }"
+          title="こんな本読んでます">Books</router-link>
       </div>  
     </header>
       
@@ -47,7 +52,9 @@
   export default {
     name: 'App',
     data() {
-      return {}
+      return {
+        homeMessage: "Home",
+      }
     },
     methods: {
       doSmoothScroll() {
@@ -56,19 +63,14 @@
           null,
           null,
           "y")
+      },
+      onMouseover: function() {
+        this.homeMessage = "profile"
+      },
+      onMouseleave: function() {
+        this.homeMessage = "Home"
       }
-    },
-
-    // valueToPoint: function(value, index, total) {
-    //   const r = value * circle.r / 100;
-    //   const angle = Math.PI * 2 / total * index - Math.PI / 2;
-    //   const tx = r * Math.cos(angle) + circle.cx;
-    //   const ty = r * Math.sin(angle) + circle.cy;
-    //   return {
-    //     x: tx,
-    //     y: ty
-    //   };
-    // }
+    }
   }
 </script>
 
@@ -140,7 +142,6 @@
   footer {
     background-color: #9999FF;
     margin: 0 auto;
-    height: 50px;
   }
 
   footer ul {
@@ -152,7 +153,7 @@
     list-style: none;
     display: inline-block;
   }
-
+  
   .btn-circle-fishy-min {
     display: inline-block;
     text-decoration: none;

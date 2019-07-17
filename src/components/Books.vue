@@ -1,10 +1,10 @@
 <template>
-  <div class="books">
-    <div class="flexbooks">
+  <div class="books container">
+    <div class="flexbooks row">
       <div  v-for="(list, index) in lists"
             v-bind:key="list.id"
             v-bind:class="['list-' + index]"
-            class="bookitem">
+            class="bookitem col-sm-6">
         
         <p>{{ list.name }}</p>
         <p>{{ list.pulished }}</p>
@@ -32,11 +32,14 @@
           { id: 11, name: "プログラムはなぜ動くのか", pulished: "日経BP社" },
           { id: 12, name: "コンピュータはなぜ動くのか", pulished: "日経BP社" },
           { id: 13, name: "オブジェクト指向でなぜつくるのか", pulished: "日経BP社" },
-          { id: 14, name: "Webを支える技術", pulished: "技術評論社" },
-          { id: 15, name: "若手ITエンジニア最強の指南書", pulished: "日経BP社" },
-          { id: 16, name: "アルゴリズム図鑑", pulished: "翔泳社" },
-          { id: 17, name: "達人プログラマー", pulished: "オーム社" },
-          { id: 18, name: "Amazon Web Services ネットワーク入門", pulished: "インプレス社" }
+          { id: 14, name: "Windowsはなぜ動くのか", pulished: "日経BP社" },
+          { id: 15, name: "Webを支える技術", pulished: "技術評論社" },
+          { id: 16, name: "若手ITエンジニア最強の指南書", pulished: "日経BP社" },
+          { id: 17, name: "アルゴリズム図鑑", pulished: "翔泳社" },
+          { id: 18, name: "達人プログラマー", pulished: "オーム社" },
+          { id: 19, name: "Amazon Web Services ネットワーク入門", pulished: "インプレス社" },
+          { id: 20, name: "Amazon Web Services 実践入門", pulished: "技術評論社" },
+          { id: 21, name: "サーバ/インフラを支える技術", pulished: "技術評論社" },
         ]
       }
     }
@@ -46,12 +49,12 @@
   
 <style>
   .flexbooks {
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
   }
   
   .bookitem {
-    width: 50%;
+    /*width: 50%;*/
     padding: 0.5em 1em;
     margin: 1em 0;
     background: #f4f4f4;

@@ -1,29 +1,33 @@
 <template>
   <div class="skill">
+    <div>
     <svg width="400" height="400">
       <g>
         <polygon :points="points"></polygon>
         <circle :cx="circle.cx" :cy="circle.cy" :r="circle.r"></circle>
         
-        <!--<text v-for="(stat, index) in stats"-->
-        <!--      :stat="stat"-->
-        <!--      :index="index"-->
-        <!--      :x="point.x"-->
-        <!--      :y="point.y">-->
-          
-        <!--  {{ stat.label }}-->
-        <!--</text>-->
-              
-        
-        <text x="100" y="20.799999999999997">A</text>
-        <text x="176.21023553303058" y="55.99999999999999">B</text>
-        <text x="176.2102355330306" y="143.99999999999997">C</text>
-        <text x="100.00000000000001" y="188">D</text>
-        <text x="23.789764466969416" y="144.00000000000006">E</text>
-        <text x="23.78976446696936" y="56.00000000000006">F</text>
-
+        <text v-for="point in point"
+              :x="point.x"
+              :y="point.y">
+          {{ point.label }}
+        </text>
       </g>
     </svg>
+    </div>
+    <div>
+    <svg width="400" height="400">
+      <g>
+        <polygon :directions="directions"></polygon>
+        <circle :cx="circle.cx" :cy="circle.cy" :r="circle.r"></circle>
+        
+        <text v-for="direction in direction"
+              :x="direction.x"
+              :y="direction.y">
+          {{ direction.label }}
+        </text>
+      </g>
+    </svg>
+    </div>
   </div>
 </template>
 <script>
@@ -41,23 +45,33 @@
   const circle = { cx: 200, cy: 200, r: 160 };
 
   const stats = [
-    { label: 'Rails', value: 89 },
-    { label: 'JavaScript', value: 66 },
-    { label: 'Git', value: 77 },
-    { label: 'Vue.js', value: 88 },
-    { label: 'RSpec', value: 99 },
-    { label: 'MySQL', value: 100 },
-    { label: 'AWS', value: 100 },
-    { label: 'Node.js', value: 100 },
-    { label: 'C', value: 100 },
+    { label: 'Rails', value: 90 },
+    { label: 'RSpec', value: 50 },
+    { label: 'JavaScript', value: 70 },
+    { label: 'Vue.js', value: 90 },
+    { label: 'Node.js', value: 60 },
+    { label: "jQuery", value: 70 },
+    { label: 'C言語', value: 40 },
+    { label: 'Git', value: 80 },
+    { label: 'MySQL', value: 60 },
   ];
+  
+  const aws = [
+    { label: 'EC2', value: 77 },
+    { label: 'RDS', value: 77 },
+    { label: 'VPC', value: 77 },
+    { label: 'Route53', value: 77 },
+    { label: 'IAM', value: 77 },
+    { label: 'S3', value: 77 },
+    ];
 
   export default {
     name: 'Skill',
     data() {
       return {
         circle: circle,
-        stats: stats 
+        stats: stats,
+        aws: aws
       }
     },
     computed: {
@@ -71,26 +85,34 @@
       },
       point: function() {
         const stats = this.stats;
-        return valueToPoint(stat.value + 10, index, total)
+        const total = stats.length;
+        var array = [];
+        stats.map(function(stat, i) {
+          const position = valueToPoint(stat.value + 10, i, total);
+          position.label = stat.label;
+          array.push(position);
+        });
+        return array;
       },
-    },
-    methods: {
-      //   add: function (e) {
-      //   e.preventDefault()
-      //   if (!this.newLabel) return
-      //   this.stats.push({
-      //     label: this.newLabel,
-      //     value: 100
-      //   })
-      //   this.newLabel = ''
-      // },
-      // remove: function (stat) {
-      //   if (this.stats.length > 3) {
-      //     this.stats.splice(this.stats.indexOf(stat), 1)
-      //   } else {
-      //     alert('Can\'t delete more!')
-      //   }
-      // }
+      directions: function() {
+        const aws = this.aws;
+        const total = aws.length;
+        return aws.map(function(stat, i) {
+          const point = valueToPoint(stat.value, i, total);
+          return point.x + "," + point.y;
+        }).join(" ");
+      },
+      direction: function() {
+        const aws = this.aws;
+        const total = aws.length;
+        var array = [];
+        aws.map(function(stat, i) {
+          const position = valueToPoint(stat.value + 10, i, total);
+          position.label = stat.label;
+          array.push(position);
+        });
+        return array;
+      }
     }
   }
 </script>
