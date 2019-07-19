@@ -21,7 +21,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(vueSmoothScroll)
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyDxPYNHH02iz3zvOOrplci-lT0vpSk_iZY',
+    key: '',
     libraries: 'places'
   },
 })
