@@ -1,10 +1,10 @@
 <template>
-  <div class="books container">
-    <div class="flexbooks row">
+  <div class="books">
+    <div class="flexbooks">
       <div  v-for="(list, index) in lists"
             v-bind:key="list.id"
             v-bind:class="['list-' + index]"
-            class="bookitem col-sm-6">
+            class="bookitem">
         
         <p>{{ list.name }}</p>
         <p>{{ list.pulished }}</p>
@@ -48,16 +48,17 @@
   
 <style>
   .flexbooks {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .bookitem {
-    /*width: 50%;*/
+    width: 90%;
     padding: 0.5em 1em;
-    margin: 1em 0;
+    margin: 1em 1em;
     background: #f4f4f4;
     border-left: solid 6px #5bb7ae;
+    border-right: solid 6px #5bb7ae;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
   }
   

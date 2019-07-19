@@ -4,15 +4,15 @@
       <div class="flexitem item1" 
         @mouseover="onMouseover"
         @mouseleave="onMouseleave">
-        <router-link to="/" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '2019/07現在' }"
+        <router-link to="/" class="btn-circle-fishy"
           title="プロフィール">{{ homeMessage }}</router-link>
       </div>   
       <div class="flexitem item2">
-        <router-link to="/skill" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: 'このサイトはVueで' }"
+        <router-link to="/skill" class="btn-circle-fishy"
           title="勉強中">Skill</router-link>
       </div>  
       <div class="flexitem item3">
-        <router-link to="/books" class="btn-circle-fishy" v-b-popover.hover="{ variant: 'info',  content: '大体の興味を示しています' }"
+        <router-link to="/books" class="btn-circle-fishy"
           title="こんな本読んでます">Books</router-link>
       </div>  
     </header>
