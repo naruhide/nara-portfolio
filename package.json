@@ -14,11 +14,9 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
-    "element-ui": "^2.10.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
-    "v-tooltip": "^2.0.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-smoothscroll": "^0.2.0",
@@ -62,8 +60,8 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 6.0.X",
+    "npm": ">= 3.0.X"
   },
   "browserslist": [
     "> 1%",

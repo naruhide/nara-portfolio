@@ -36,10 +36,12 @@
           { id: 15, name: "Webを支える技術", pulished: "技術評論社" },
           { id: 16, name: "若手ITエンジニア最強の指南書", pulished: "日経BP社" },
           { id: 17, name: "アルゴリズム図鑑", pulished: "翔泳社" },
-          { id: 18, name: "達人プログラマー", pulished: "オーム社" },
-          { id: 19, name: "Amazon Web Services ネットワーク入門", pulished: "インプレス社" },
-          { id: 20, name: "Amazon Web Services 実践入門", pulished: "技術評論社" },
-          { id: 21, name: "サーバ/インフラを支える技術", pulished: "技術評論社" },
+          { id: 18, name: "世界で最も強力な9のアルゴリズム", pulished: "日経BP社" },
+          { id: 19, name: "達人プログラマー", pulished: "オーム社" },
+          { id: 20, name: "Amazon Web Services ネットワーク入門", pulished: "インプレス社" },
+          { id: 21, name: "Amazon Web Services 実践入門", pulished: "技術評論社" },
+          { id: 22, name: "サーバ/インフラを支える技術", pulished: "技術評論社" },
+          { id: 23, name: "新しいLinuxの教科書", pulished: "SBクリエイティブ社" },
         ]
       }
     }
@@ -55,7 +57,7 @@
   .bookitem {
     width: 90%;
     padding: 0.5em 1em;
-    margin: 1em 1em;
+    margin: 1em 2em;
     background: #f4f4f4;
     border-left: solid 6px #5bb7ae;
     border-right: solid 6px #5bb7ae;
