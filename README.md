@@ -1,10 +1,10 @@
-# my-portfolio 2019/07 
+# nara-portfolio 2019/07 
 
+## URL  
 https://nara-portfolio.herokuapp.com/#/
 
-> A Vue.js project
-
-other project used Rails(2019/05)
+## A Vue.js project
+  Other project used Rails(2019/05)
 
   <a href="https://my-google-teacher.herokuapp.com" target="_blank">Rails application (my-google-teacher)</a><br />
   <a href="https://github.com/naruhide/my-google-teacher.git" target="_blank">GitHub</a>
